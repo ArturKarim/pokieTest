@@ -3,10 +3,12 @@ import Footer from '@/components/Footer.vue'
 import FAQ from '@/components/FAQ.vue'
 import CasinoSelector from '@/components/CasinoSelector.vue'
 import Headerc from '@/components/Headerc.vue'
+import banner from '@/components/banner.vue'
 </script>
 
 <template>
   <Headerc></Headerc>
+  <banner></banner>
   <div class="main">
     <CasinoSelector />
     <FAQ />

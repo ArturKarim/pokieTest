@@ -4,35 +4,63 @@
       <img alt="logopokies24.io" src="../assets/images/logo.svg" />
     </div>
     <div class="header-menu">
-      <button>HOME</button>
-      <div>
-        <button class="popup-menu">NEW POKIES</button>
-        <button class="popup-menu">POPULAR POKIES</button>
-        <button class="popup-menu">POKIES BY PROVIDER</button>
-        <button class="popup-menu">TABLE GAMES</button>
-        <button class="popup-menu">LIVE DEALER</button>
-        <button class="popup-menu">VIRTUAL</button>
-        <button class="popup-menu">CRASH POKIES</button>
-        FREE POKIES
-      </div>
+      <div>HOME</div>
+      <div>FREE POKIES</div>
       <div>ONLINE CASINOS</div>
       <div>ABOUT US</div>
       <div>CONTACT</div>
     </div>
-    <button class="header-btn">Claim Gift</button>
+    <div class="header-btn">
+      <img alt="Claim gift" class="header-claim-btn" src="../assets/images/ClaimGift.png" />
+      Claim Gift
+    </div>
   </div>
 </template>
 <style scoped>
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: #193347;
-  max-width: 1440px;
-  height: 64px;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   font-size: 16px;
+  padding: 12px 42px;
+}
+
+.header-logo {
 }
 
 .header-menu {
-  font-size: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  color: white;
+  font-size: 16px;
+}
+
+.header-claim-btn {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.header-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 148px;
+  height: 46px;
+  gap: 10px;
+  border: 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #ffd700;
+  background: linear-gradient(to right, #00223b, #0d6eb9);
+  padding: 10px 20px;
+  color: #ffd700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
 
 .popup-menu {
