@@ -3,7 +3,7 @@ import Footer from '@/components/Footer.vue'
 import FAQ from '@/components/FAQ.vue'
 import CasinoSelector from '@/components/CasinoSelector.vue'
 import Headerc from '@/components/Headerc.vue'
-import banner from '@/components/Banner.vue'
+import Banner from '@/components/Banner.vue'
 import InfoBlock from '@/components/InfoBlock.vue'
 </script>
 

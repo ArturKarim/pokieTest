@@ -28,6 +28,7 @@
 }
 
 .banner-img {
+  background-color: black;
   width: 100%;
   height: 454px;
   object-fit: cover;
