@@ -3,14 +3,18 @@ import Footer from '@/components/Footer.vue'
 import FAQ from '@/components/FAQ.vue'
 import CasinoSelector from '@/components/CasinoSelector.vue'
 import Headerc from '@/components/Headerc.vue'
-import banner from '@/components/banner.vue'
+import banner from '@/components/Banner.vue'
+import InfoBlock from '@/components/InfoBlock.vue'
 </script>
 
 <template>
   <Headerc></Headerc>
-  <banner></banner>
+
+  <Banner></Banner>
+
   <div class="main">
     <CasinoSelector />
+    <info-block />
     <FAQ />
   </div>
   <Footer />
