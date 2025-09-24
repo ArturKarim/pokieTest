@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import DoneItem from '@/components/DoneItem.vue'
+</script>
 
 <template>
   <div class="container">
@@ -77,9 +79,9 @@
       <div class="license-block">
         <div class="title">
           <img
-            alt="LicAndReg"
+            alt="Game providers"
             class="licence-block-icon"
-            src="../assets/icons/LicenceAndRegulator.png"
+            src="../assets/icons/Game providers.png"
           />
           Game providers
           <p>
@@ -92,9 +94,9 @@
       <div class="license-block">
         <div class="title">
           <img
-            alt="LicAndReg"
+            alt="Payment methods and currency"
             class="licence-block-icon"
-            src="../assets/icons/LicenceAndRegulator.png"
+            src="../assets/icons/Payment%20Methods.png"
           />
           Payment methods and currency
           <p>
@@ -107,11 +109,7 @@
       </div>
       <div class="license-block">
         <div class="title">
-          <img
-            alt="LicAndReg"
-            class="licence-block-icon"
-            src="../assets/icons/LicenceAndRegulator.png"
-          />
+          <img alt="Bonus terms" class="licence-block-icon" src="../assets/icons/Bonus Terms.png" />
           Bonus terms
           <p>
             Always read the wagering requirements and contribution rates. Transparent and fair bonus
@@ -122,9 +120,9 @@
       <div class="license-block">
         <div class="title">
           <img
-            alt="LicAndReg"
+            alt="Security and privacy"
             class="licence-block-icon"
-            src="../assets/icons/LicenceAndRegulator.png"
+            src="../assets/icons/Security.png"
           />
           Security and privacy
           <p>Check for SSL encryption, an up-to-date privacy policy and clear KYC procedures.</p>
@@ -133,9 +131,9 @@
       <div class="license-block">
         <div class="title">
           <img
-            alt="LicAndReg"
+            alt="Customer support"
             class="licence-block-icon"
-            src="../assets/icons/LicenceAndRegulator.png"
+            src="../assets/icons/Customer-Support.png"
           />
           Customer support
           <p>
@@ -151,6 +149,169 @@
       lets you filter by pokies selection banking options in addition to verified licenses, which
       speeds up the decision process. The pokies24.io also publishes responsible gambling
       information and privacy details for each reviewed operator.
+    </div>
+    <div class="reliability-container">
+      <div class="reliability-block">
+        <div class="title">
+          What should you do if you have doubts about the reliability of a casino?
+        </div>
+        <p class="subtitle">
+          If anything seems unreliable, take the steps before you deposit real money:
+        </p>
+        <div class="reliability-mark-list">
+          <DoneItem>
+            <span class="span-bolt"> Check licence documentation.</span>
+            A reputable casino will display its licence details and regulator contact information.
+            Cross-check the licence number on the regulator’s public register.
+          </DoneItem>
+          <DoneItem>
+            <span class="span-bolt"> Check licence documentation.</span>
+            A reputable casino will display its licence details and regulator contact information.
+            Cross-check the licence number on the regulator’s public register.
+          </DoneItem>
+          <DoneItem>
+            <span class="span-bolt">
+              Read the terms, especially bonus terms and withdrawal rules.</span
+            >
+            Look for unusual restrictions or very high wagering requirements.
+          </DoneItem>
+          <DoneItem>
+            <span class="span-bolt"> Search for player reviews and complaints.</span>
+            Real-world feedback often exposes slow KYC, payout delays or withheld wins.
+          </DoneItem>
+          <DoneItem>
+            <span class="span-bolt"> Use demo play to test games and performance.</span>
+            Demo games let you check load times, RTP visibility and mobile behaviour without
+            financial risk.
+          </DoneItem>
+          <DoneItem>
+            <span class="span-bolt"> Stick to verified lists.</span>
+            On
+            <span class="span-underlined"> pokies24.io</span>
+            we publish only verified online casinos and recommend choosing casinos that appear on
+            our verified lists. Verification includes checks on licence, provider roster and
+            practical payment testing. When in doubt, choose an operator that has been independently
+            verified.
+          </DoneItem>
+        </div>
+      </div>
+    </div>
+    <div class="middle-align">
+      <div class="title">
+        How do we rate and verify the reliability of online casinos
+        <p>
+          Reliable verification depends on repeatable checks. Our rating process covers three main
+          areas: licensing, bonus<br />
+          fairness and player feedback. These checks are why our lists focus on verified online
+          casinos. Verified means the<br />
+          site passed our licence and operational checks and does not have a pattern of unresolved
+          complaints.
+        </p>
+      </div>
+    </div>
+    <div class="Lbp-container">
+      <div class="Lbp-block">
+        <img alt="Licensing Check" class="Lbp-icon" src="../assets/icons/LicensingCheck.png" />
+        <div class="Lbp-title">Licensing Check</div>
+        We confirm the operator’s licence, the issuing authority, the licence number and the current
+        status on the regulator’s site. We also note whether the operator publishes independent
+        audits or RNG certification. Not all licences hold the same weight. A licence from a major
+        regulator normally signals stronger compliance and enforcement than a basic sub-licence.
+      </div>
+      <div class="Lbp-block">
+        <img alt="Bonus Fairness" class="Lbp-icon" src="../assets/icons/BonusFairness.png" />
+        <div class="Lbp-title">Bonus Fairness</div>
+        We evaluate all advertised bonuses for clarity and fairness. Key items are wagering
+        requirements, which games count towards meeting those requirements, any maximum cashout
+        limits and prohibited game lists. A generous-sounding bonus with opaque or punitive
+        conditions is a red flag.
+      </div>
+      <div class="Lbp-block">
+        <img
+          alt="Player reviews and complaints"
+          class="Lbp-icon"
+          src="../assets/icons/PlayerReview.png"
+        />
+        <div class="Lbp-title">Player reviews and complaints</div>
+        We collect and aggregate player reports about withdrawals, KYC processing, account closures
+        and customer support. Where complaints appear, we look for evidence of dispute resolution. A
+        casino that resolves complaints promptly and transparently will receive a higher rating than
+        one with many unresolved complaints.
+      </div>
+    </div>
+    <div class="other-info-container">
+      <div class="other-info-block">
+        <div class="title">Mobile Casino Experience in Australia</div>
+        Mobile is the dominant channel for online gambling in Australia. A good mobile online casino
+        Australia should have a responsive website or an app that works on modern phones and
+        tablets. Key mobile considerations are:
+        <div>
+          <ul>
+            <li class="other-info-text">
+              &#8226 Fast loading of pokies and low latency on mobile networks.
+            </li>
+            <li class="other-info-text">&#8226 Touch-friendly controls and clear game UI.</li>
+            <li class="other-info-text">
+              &#8226 Security parity with desktop versions, including SSL and secure payment flows.
+            </li>
+            <li class="other-info-text">
+              &#8226 Consistent bonus functionality across mobile and desktop.
+            </li>
+          </ul>
+        </div>
+        Testing the mobile experience via demo games is a practical way to assess an operator’s
+        mobile readiness before committing funds.
+        <div class="title">Mobile Casino Experience in Australia</div>
+        Live casino games bring a real-dealer table to your screen via video stream. Popular live
+        games include live blackjack, live roulette, live baccarat and game-show style titles. When
+        choosing a live casino:
+        <DoneItem>
+          <span class="span-bolt">Check which live providers the site uses.</span> Reputable vendors
+          provide high-quality streams
+          and regulated game rules.
+        </DoneItem>
+        <DoneItem>
+          <span class="span-bolt"> Verify whether the streaming servers are stable</span> in your
+          region to avoid latency during
+          live
+          sessions.
+        </DoneItem>
+        <DoneItem>
+          <span class="span-bolt">Confirm stake ranges.</span> Some live tables are low-limit and
+          suitable for beginners, while
+          others cater to high rollers.
+        </DoneItem>
+        Aristocrat and Pragmatic Play are prominent names in the market that partner with multiple
+        operators. Pragmatic Play, for example, offers live dealer products that many offshore
+        casinos include in their portfolios. Aristocrat has expanded its digital reach and now
+        supplies content that appears across regulated and offshore sites. These providers are
+        commonly available in casinos that accept Australian players.
+      </div>
+    </div>
+    <div class="middle-align">
+      <div class="title">
+        Online casino deposit methods and withdrawals
+        <p>
+          Payment options are a major factor when choosing where to play. Below are common<br>
+          methods
+          with a short description of how they work for Australian players.
+        </p>
+      </div>
+    </div>
+    <div class="payment-container">
+      <div class="payment-block">
+        <img alt="Crypto Casino" class="payment-image" src="../assets/icons/CryptoCasino.png">
+        <div class="payment-title">Crypto Casino</div>
+        <p>
+          Cryptocurrencies offer fast settlement times and increased privacy for players who prefer
+          them. Many crypto casinos accept Bitcoin, Ethereum and other tokens. Crypto deposits are
+          typically instant. Withdrawal times depend on network congestion and the casino’s
+          processing
+          policy. Crypto can be favourable if you want quick access to your funds and low friction
+          for
+          international transfers. LSI terms to consider include casinos with fast withdrawals and
+          instant payout casinos Australia.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -191,8 +352,6 @@ p {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  margin: 10px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .span-bolt {
@@ -213,7 +372,7 @@ p {
 }
 
 .license-block {
-  background-color: #08263c;
+  background-color: #041d30;
   border: 1px solid #57626c;
   border-radius: 20px;
   padding: 20px;
@@ -223,5 +382,110 @@ p {
 .licence-block-icon {
   width: 40px;
   height: 40px;
+}
+
+.reliability-block {
+  margin-bottom: 95px;
+  width: 952px;
+  padding: 20px;
+  margin-top: 45px;
+  background-color: #295374;
+  border: 1px solid #57626c;
+  border-radius: 20px;
+}
+
+.reliability-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.subtitle {
+  padding-bottom: 20px;
+}
+
+.reliability-mark-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Lbp-container {
+  display: flex;
+  width: 1356px;
+  height: 351px;
+  gap: 20px;
+}
+
+.Lbp-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 150%;
+  gap: 10px;
+  padding: 20px;
+  width: 439px;
+  background-color: #295374;
+  border: 1px solid #57626c;
+  border-radius: 20px;
+}
+
+.Lbp-title {
+  font-size: 22px;
+}
+
+.Lbp-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.other-info-container {
+  margin-bottom: 80px;
+}
+
+.other-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #08263c;
+  border: 1px solid #57626c;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 80px;
+}
+
+.other-info-text {
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-block {
+  display: flex;
+  width: 1016px;
+  height: 204px;
+  background-color: #2f5776;
+  border: 1px solid #57626c;
+  border-radius: 20px;
+}
+
+.payment-title {
+  width: 192px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.payment-image {
+  width: 110px;
+  height: 110px;
+  padding: 20px;
 }
 </style>
