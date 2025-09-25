@@ -6,7 +6,7 @@ import DoneItem from '@/components/DoneItem.vue'
   <div class="container">
     <div class="top-block">
       <div class="title">What is a real money online casino?</div>
-      <p>
+      <p class="regular-text">
         <span class="span-bolt">A real money casino i</span>s a website or app where people place
         wagers using actual currency and can win cash prizes. These platforms host a wide range of
         games, including pokies, table games like blackjack and roulette, speciality games, and
@@ -14,14 +14,14 @@ import DoneItem from '@/components/DoneItem.vue'
         free-play sites is the financial element: players deposit funds, make bets that affect their
         real balance, and can request withdrawals of any winnings.
       </p>
-      <p>
+      <p class="regular-text">
         For many Australian players the main search terms are real money casino and play pokies
         online for real money. Those search terms reflect the user intent: find a platform where
         pokies and other casino games accept AUD or other currencies, provide secure banking and
         allow timely withdrawals.
       </p>
       <div class="title">Are online casinos legal in Australia?</div>
-      <p>
+      <p class="regular-text">
         The legal framework for online gambling in Australia centers on the Interactive Gambling Act
         2001. That law restricts the provision of some interactive gambling services to people in
         Australia, as it also restricts advertising the services. The Act prohibits offering online
@@ -29,7 +29,7 @@ import DoneItem from '@/components/DoneItem.vue'
         <span class="span-underlined"> Communications and Media Authority</span> explains the scope
         of the Act and the services that are banned.
       </p>
-      <p>
+      <p class="regular-text">
         In practice, this means Australian-based companies are not permitted to operate online
         casinos for players physically in Australia. It does not make it a criminal offence for an
         individual to register with an overseas operator. Many offshore online casinos accept
@@ -37,7 +37,7 @@ import DoneItem from '@/components/DoneItem.vue'
         Australians. For a legal text reference, the Act and its clauses on prohibited interactive
         gambling services are publicly available.
       </p>
-      <p>
+      <p class="regular-text">
         The regulatory control in Australia centers on providers and promotions for local customers.
         ACMA plus other regulators investigate operators and block services which target
         Australians. Due to that regulatory situation, many Australian players use good offshore
@@ -50,7 +50,7 @@ import DoneItem from '@/components/DoneItem.vue'
       <div class="title">
         How to choose the best Australian online casino<br />
         for your needs
-        <p>
+        <p class="regular-text">
           The choice of an online casino is a practical exercise. Different players prioritize
           different elements, such as the<br />
           pokies available, the speed of withdrawals, the payment availability in AUD, or how well a
@@ -68,7 +68,7 @@ import DoneItem from '@/components/DoneItem.vue'
             src="../assets/icons/LicenceAndRegulator.png"
           />
           Licence and regulator
-          <p>
+          <p class="regular-text">
             A clear, verifiable licence is the basic trust signal. Suitable licences may<br />include
             Malta, Gibraltar, Isle of Man or established Curacao regimes. The<br />
             strength of the licence matters because some regulators enforce rules more<br />
@@ -84,7 +84,7 @@ import DoneItem from '@/components/DoneItem.vue'
             src="../assets/icons/Game providers.png"
           />
           Game providers
-          <p>
+          <p class="regular-text">
             Reputable suppliers such as Aristocrat and Pragmatic Play are usually a sign that the
             casino offers quality, tested games. Known providers tend to supply vetted random number
             generators and regular audits.
@@ -99,7 +99,7 @@ import DoneItem from '@/components/DoneItem.vue'
             src="../assets/icons/Payment%20Methods.png"
           />
           Payment methods and currency
-          <p>
+          <p class="regular-text">
             If you want to play in AUD or expect fast payouts, ensure the casino supports AUD and
             lists realistic processing times. Look for options such as PayID, Neosurf, PayPal and
             crypto. Instant payout casinos Australia and casinos with fast withdrawals are
@@ -111,7 +111,7 @@ import DoneItem from '@/components/DoneItem.vue'
         <div class="title">
           <img alt="Bonus terms" class="licence-block-icon" src="../assets/icons/Bonus Terms.png" />
           Bonus terms
-          <p>
+          <p class="regular-text">
             Always read the wagering requirements and contribution rates. Transparent and fair bonus
             terms show the operator treats players seriously.
           </p>
@@ -125,7 +125,8 @@ import DoneItem from '@/components/DoneItem.vue'
             src="../assets/icons/Security.png"
           />
           Security and privacy
-          <p>Check for SSL encryption, an up-to-date privacy policy and clear KYC procedures.</p>
+          <p class="regular-text">Check for SSL encryption, an up-to-date privacy policy and clear
+            KYC procedures.</p>
         </div>
       </div>
       <div class="license-block">
@@ -136,7 +137,7 @@ import DoneItem from '@/components/DoneItem.vue'
             src="../assets/icons/Customer-Support.png"
           />
           Customer support
-          <p>
+          <p class="regular-text">
             Reliable live chat, email and documented dispute procedures matter when a withdrawal or
             account issue occurs.
           </p>
@@ -199,7 +200,7 @@ import DoneItem from '@/components/DoneItem.vue'
     <div class="middle-align">
       <div class="title">
         How do we rate and verify the reliability of online casinos
-        <p>
+        <p class="regular-text">
           Reliable verification depends on repeatable checks. Our rating process covers three main
           areas: licensing, bonus<br />
           fairness and player feedback. These checks are why our lists focus on verified online
@@ -247,21 +248,21 @@ import DoneItem from '@/components/DoneItem.vue'
         tablets. Key mobile considerations are:
         <div>
           <ul>
-            <li class="other-info-text">
+            <p class="regular-text">
               &#8226 Fast loading of pokies and low latency on mobile networks.
-            </li>
-            <li class="other-info-text">&#8226 Touch-friendly controls and clear game UI.</li>
-            <li class="other-info-text">
+            </p>
+            <p class="regular-text">&#8226 Touch-friendly controls and clear game UI.</p>
+            <p class="regular-text">
               &#8226 Security parity with desktop versions, including SSL and secure payment flows.
-            </li>
-            <li class="other-info-text">
+            </p>
+            <p class="regular-text">
               &#8226 Consistent bonus functionality across mobile and desktop.
-            </li>
+            </p>
           </ul>
         </div>
         Testing the mobile experience via demo games is a practical way to assess an operator’s
         mobile readiness before committing funds.
-        <div class="title">Mobile Casino Experience in Australia</div>
+        <div class="title">Live Casino Australia</div>
         Live casino games bring a real-dealer table to your screen via video stream. Popular live
         games include live blackjack, live roulette, live baccarat and game-show style titles. When
         choosing a live casino:
@@ -291,7 +292,7 @@ import DoneItem from '@/components/DoneItem.vue'
     <div class="middle-align">
       <div class="title">
         Online casino deposit methods and withdrawals
-        <p>
+        <p class="regular-text">
           Payment options are a major factor when choosing where to play. Below are common<br>
           methods
           with a short description of how they work for Australian players.
@@ -301,18 +302,119 @@ import DoneItem from '@/components/DoneItem.vue'
     <div class="payment-container">
       <div class="payment-block">
         <img alt="Crypto Casino" class="payment-image" src="../assets/icons/CryptoCasino.png">
-        <div class="payment-title">Crypto Casino</div>
-        <p>
-          Cryptocurrencies offer fast settlement times and increased privacy for players who prefer
-          them. Many crypto casinos accept Bitcoin, Ethereum and other tokens. Crypto deposits are
-          typically instant. Withdrawal times depend on network congestion and the casino’s
-          processing
-          policy. Crypto can be favourable if you want quick access to your funds and low friction
-          for
-          international transfers. LSI terms to consider include casinos with fast withdrawals and
-          instant payout casinos Australia.</p>
+        <div class="payment-title">Crypto Casino
+          <p class="regular-text">
+            Cryptocurrencies offer fast settlement times and increased privacy for players who
+            prefer
+            them. Many crypto casinos accept Bitcoin, Ethereum and other tokens. Crypto deposits
+            are
+            typically instant. Withdrawal times depend on network congestion and the casino’s
+            processing
+            policy. Crypto can be favourable if you want quick access to your funds and low friction
+            for
+            international transfers. LSI terms to consider include casinos with fast withdrawals and
+            instant payout casinos Australia.</p>
+        </div>
+      </div>
+      <div class="payment-block">
+        <img alt="PayID Casino" class="payment-image" src="../assets/icons/PayIDCasino.png">
+        <div class="payment-title">PayID Casino
+          <p class="regular-text">
+            PayID is an Australian banking identifier that links an easy-to-remember handle to a
+            bank account. PayID deposits can be fast and reliable. Several online casinos now accept
+            PayID as it simplifies AUD deposits and reduces input errors. For Australian players who
+            want an AUD deposit method with bank-level settlement, PayID is a relevant option.</p>
+        </div>
+      </div>
+      <div class="payment-block">
+        <img alt="PayPal Casino" class="payment-image" src="../assets/icons/PayPalCasino.png">
+        <div class="payment-title">PayPal Casino
+          <p class="regular-text">
+            PayPal provides an extra layer of consumer protection and quick transfers between a
+            PayPal account and the casino. PayPal acceptance varies by operator and jurisdiction. If
+            a casino supports PayPal, deposits are usually instant and withdrawals are faster than
+            standard bank transfers. Many players select PayPal for convenience and dispute
+            resolution mechanisms.</p>
+        </div>
+      </div>
+      <div class="payment-block">
+        <img alt="Casino Credit Card" class="payment-image"
+             src="../assets/icons/CasinoCreditCard.png">
+        <div class="payment-title">Casino Credit Card
+          <p class="regular-text">
+            Visa and MasterCard remain widely accepted for deposits. Card withdrawals may be
+            restricted by some operators or subject to longer processing times. Card payments are
+            generally straightforward for deposits, but check whether the casino allows card-based
+            withdrawals to the same card.</p>
+        </div>
+      </div>
+      <div class="payment-block">
+        <img alt="Neosurf Casino" class="payment-image"
+             src="../assets/icons/NeosurfCasino.png">
+        <div class="payment-title">Neosurf Casino
+          <p class="regular-text">
+            Neosurf is a prepaid voucher system that allows deposits without sharing bank or card
+            details. It is convenient for players who prefer preloaded funds. Withdrawals cannot go
+            to Neosurf vouchers, so if you use Neosurf for deposits you will need to confirm the
+            casino’s withdrawal options in advance.</p>
+        </div>
+      </div>
+      <div>
+      </div>
+      <p class="middle-align">
+        When you research a casino, confirm whether it accepts AUD, the expected withdrawal
+        processing<br> time and any fees. Casinos that accept AUD reduce currency conversion costs
+        for
+        Australians. Many<br> operators now publish average withdrawal timelines; compare those
+        when
+        choosing an operator.
+      </p>
+    </div>
+    <div class=".responsible-block">
+      <div class="responsible-block">
+        <div class="title">Responsible Gambling and Player Protection</div>
+        <p class="regular-text">Responsible gambling is essential. A reputable casino provides
+          tools and
+          resources such as
+          deposit limits, session reminders and self-exclusion options. For Australian players the
+          national self-exclusion register, BetStop, is one of the resources to consider for
+          broader
+          exclusion across participating operators.</p>
+        <div>
+          <ul class="regular-text"> Key protection measures to look for when selecting a casino:
+            <p class="other-info-text">
+              &#8226 Clear responsible gambling page with links to support services.
+            </p>
+            <p class="other-info-text">&#8226 Deposit, loss and wager limits that are easy to set
+              and change.</p>
+            <p class="other-info-text">
+              &#8226 Verified KYC and anti-money laundering procedures that protect both the
+              player and the operator.
+            </p>
+            <p class="other-info-text">
+              &#8226 Transparent dispute resolution contact points and escalation routes.
+            </p>
+            <p class="regular-text"><span class="span-underlined">Pokies24.io</span> publishes a
+              responsible gaming compact and
+              highlights operators that
+              provide robust player protection. If you or someone you know has concerns, use the
+              available support lines and self-exclusion mechanisms.
+            </p>
+          </ul>
+        </div>
+        <div class="title">Closing notes</div>
+        <p class="regular-text"> Online real money casino play involves risk and responsibility.
+          For Australian players,
+          the relevant law means local providers cannot offer casino services, yet offshore
+          casinos
+          continue to accept Australians and provide AUD-compatible options. Evaluate operators on
+          licence, provider roster, banking methods and dispute resolution history. Use demo play
+          to
+          learn games before staking funds, and rely on verified lists, such as those on
+          <span class="span-underlined"> pokies24.io</span>, to reduce risk.</p>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -348,7 +450,7 @@ import DoneItem from '@/components/DoneItem.vue'
   margin-bottom: 45px;
 }
 
-p {
+.regular-text {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -463,22 +565,28 @@ p {
 
 .payment-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .payment-block {
   display: flex;
   width: 1016px;
   height: 204px;
+  padding: 20px;
   background-color: #2f5776;
   border: 1px solid #57626c;
   border-radius: 20px;
 }
 
 .payment-title {
-  width: 192px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 10px;
   font-size: 26px;
   font-weight: bold;
 }
@@ -486,6 +594,17 @@ p {
 .payment-image {
   width: 110px;
   height: 110px;
-  padding: 20px;
+  margin-right: 20px;
+}
+
+.responsible-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #08263c;
+  border: 1px solid #57626c;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 35px;
 }
 </style>
