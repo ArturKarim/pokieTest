@@ -81,7 +81,7 @@ import DoneItem from '@/components/DoneItem.vue'
           <img
             alt="Game providers"
             class="licence-block-icon"
-            src="../assets/icons/Game providers.png"
+            src="../assets/icons/GameProviders.png"
           />
           Game providers
           <p class="regular-text">
