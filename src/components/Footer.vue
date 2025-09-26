@@ -78,12 +78,11 @@
               <span class="cta-text">Exclusive casino deals</span>
             </div>
           </div>
-          <!-- Скрытая форма MailerLite -->
+
           <div id="mailerlite-form" style="display: none">
             <div class="ml-embedded" data-form="PLuCqf"></div>
           </div>
 
-          <!-- Видимая кастомная форма -->
           <div class="social-input-container">
             <input
               v-model="email"
@@ -309,7 +308,6 @@ import { onMounted, ref } from 'vue'
 const email = ref('')
 
 onMounted(() => {
-  // Загружаем MailerLite скрипт
   if (!window.ml) {
     const script = document.createElement('script')
     script.src = 'https://assets.mailerlite.com/js/universal.js'
@@ -329,14 +327,12 @@ const subscribe = () => {
     return
   }
 
-  // Валидация email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email.value)) {
     alert('Please enter a valid email address')
     return
   }
 
-  // Используем MailerLite API для подписки
   if (window.ml) {
     window.ml(
       'webforms',
@@ -345,13 +341,12 @@ const subscribe = () => {
       {
         email: email.value,
         fields: {},
-        // Дополнительные параметры если нужны
       },
       {
         onSubmit: (data) => {
           console.log('Form submitted:', data)
           alert('Thank you for subscribing!')
-          email.value = '' // Очищаем поле после успешной подписки
+          email.value = ''
         },
         onError: (error) => {
           console.error('Subscription error:', error)
@@ -360,7 +355,6 @@ const subscribe = () => {
       },
     )
   } else {
-    // Fallback если MailerLite не загрузился
     console.log('Would subscribe email:', email.value)
     alert('Thank you for subscribing!')
     email.value = ''
