@@ -309,7 +309,6 @@ const email = ref('')
 const formId = ref('ml-form-' + Math.random().toString(36).substr(2, 9))
 
 onMounted(() => {
-  // Загружаем MailerLite скрипт
   if (!window.ml) {
     const script = document.createElement('script')
     script.src = 'https://assets.mailerlite.com/js/universal.js'
@@ -335,24 +334,19 @@ const submitToMailerLite = () => {
     return
   }
 
-  // Находим скрытую форму MailerLite и заполняем её
   const hiddenForm = document.getElementById(formId.value)
   if (hiddenForm) {
-    // Создаем скрытое поле email и добавляем в форму
     const emailInput = document.createElement('input')
     emailInput.type = 'hidden'
     emailInput.name = 'fields[email]'
     emailInput.value = email.value
     hiddenForm.appendChild(emailInput)
 
-    // Отправляем форму
     hiddenForm.submit()
 
-    // Очищаем поле после отправки
     email.value = ''
     alert('Thank you for subscribing!')
   } else {
-    // Fallback если форма не найдена
     console.log('Would subscribe email:', email.value)
     alert('Thank you for subscribing!')
     email.value = ''

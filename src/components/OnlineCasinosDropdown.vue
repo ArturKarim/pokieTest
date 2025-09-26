@@ -1,9 +1,7 @@
 <template>
   <div class="dropdown-container">
-    <!-- Основная кнопка -->
     <button class="dropdown-btn main-btn" @click="toggleMainDropdown">ONLINE CASINOS</button>
 
-    <!-- Основное dropdown меню -->
     <div v-if="isMainOpen" class="dropdown-menu main-menu">
       <div
         v-for="(item, id) in list"
@@ -23,9 +21,12 @@
           PAYMENT METHODS >
         </button>
 
-        <!-- Вложенное dropdown меню -->
         <div v-if="isNestedOpen" class="dropdown-menu nested-menu">
-          <div><a class="menu-item" href="https://pokies24.io/online-casinos">PayId</a></div>
+          <div>
+            <a class="menu-item" href="#" @click.prevent="handlePaymentMethodClick('PayId')"
+              >PayId</a
+            >
+          </div>
           <div class="menu-item">Credit cards</div>
           <div class="menu-item">Crypto</div>
           <div class="menu-item">Neosurf</div>
@@ -49,7 +50,7 @@ export default {
   methods: {
     toggleMainDropdown() {
       this.isMainOpen = !this.isMainOpen
-      // Закрываем вложенное меню при открытии основного
+
       if (this.isMainOpen) {
         this.isNestedOpen = false
       }
@@ -60,7 +61,6 @@ export default {
       this.setActive(13)
     },
 
-    // Закрытие меню при клике вне компонента
     closeAllDropdowns(event) {
       if (!this.$el.contains(event.target)) {
         this.isMainOpen = false
@@ -70,12 +70,23 @@ export default {
     setActive(id) {
       this.active = id
     },
-  },
-  mounted() {
-    document.addEventListener('click', this.closeAllDropdowns)
-  },
-  beforeUnmount() {
-    document.removeEventListener('click', this.closeAllDropdowns)
+    handleCategoryClick(id) {
+      this.setActive(id)
+      this.isMainOpen = false
+
+      this.$emit('category-selected', {
+        type: 'category',
+        value: this.list[id],
+        id: id,
+      })
+    },
+
+    mounted() {
+      document.addEventListener('click', this.closeAllDropdowns)
+    },
+    beforeUnmount() {
+      document.removeEventListener('click', this.closeAllDropdowns)
+    },
   },
 }
 </script>

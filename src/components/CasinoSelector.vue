@@ -41,23 +41,22 @@ import SideButton from '@/components/SideButton.vue'
 import SideExpandable from '@/components/SideExpandable.vue'
 import CasinoCard from '@/components/CasinoCard.vue'
 
-// Импортируем изображения
 import side1 from '@/assets/images/side1.png'
 import side2 from '@/assets/images/side2.png'
 import side3 from '@/assets/images/side3.png'
 import side4 from '@/assets/images/side4.png'
 import side5 from '@/assets/images/side5.png'
 
-import card1 from '@/assets/images/card1.png'
-import card2 from '@/assets/images/card2.png'
-import card3 from '@/assets/images/card3.png'
-import card4 from '@/assets/images/card4.png'
-import card5 from '@/assets/images/card5.png'
-import card6 from '@/assets/images/card6.png'
-import card7 from '@/assets/images/card7.png'
-import card8 from '@/assets/images/card8.png'
-import card9 from '@/assets/images/card9.png'
-import card10 from '@/assets/images/card10.png'
+import card1 from '@/assets/images/Caswino.svg'
+import card2 from '@/assets/images/Neospin.svg'
+import card3 from '@/assets/images/CrownSlots.svg'
+import card4 from '@/assets/images/BDM.svg'
+import card5 from '@/assets/images/RichardCasino.svg'
+import card6 from '@/assets/images/AxeCasino.svg'
+import card7 from '@/assets/images/OscarSpin.svg'
+import card8 from '@/assets/images/SkyCrown.svg'
+import card9 from '@/assets/images/HugoCasino.svg'
+import card10 from '@/assets/images/RockWin.svg'
 
 const buttons = ref([
   { src: side1, text: 'Best online casinos Australia' },
@@ -78,7 +77,7 @@ const servicesItems = ref([
 const tab1 = [
   {
     imgSrc: card1,
-    name: 'Caswino Casino',
+    name: 'Caswino',
     rating: 5,
     text1: 'Welcome bonus: 600% up to 4800$',
     text2: '+ 255 Free spins',
@@ -98,7 +97,7 @@ const tab1 = [
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
     text2: '+ 250 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/crownslots-review',
   },
   {
     imgSrc: card4,
@@ -106,7 +105,7 @@ const tab1 = [
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 150 Free Spins',
-    url: 'https://pokies24.io/richard-casino-review',
+    url: 'https://pokies24.io/bdm-bet-review',
   },
   {
     imgSrc: card5,
@@ -114,7 +113,7 @@ const tab1 = [
     rating: 4.7,
     text1: 'Welcome bonus: up to AU$5,000',
     text2: '+ 500 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review#',
+    url: 'https://pokies24.io/richard-casino-review',
   },
   {
     imgSrc: card6,
@@ -122,7 +121,7 @@ const tab1 = [
     rating: 4.5,
     text1: 'Welcome bonus: up to AU$5,625',
     text2: '+ 200 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/axe-casino-review',
   },
   {
     imgSrc: card7,
@@ -130,7 +129,7 @@ const tab1 = [
     rating: 4.4,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 225 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/oscarspin-review',
   },
   {
     imgSrc: card8,
@@ -138,7 +137,7 @@ const tab1 = [
     rating: 4.3,
     text1: 'Welcome bonus: up to AU$8,000',
     text2: '+ 400 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/skycrown-review',
   },
   {
     imgSrc: card9,
@@ -146,7 +145,7 @@ const tab1 = [
     rating: 4.2,
     text1: 'Welcome bonus: 225% up to AU$1,000',
     text2: '+ 275 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/hugo-casino-review',
   },
   {
     imgSrc: card10,
@@ -154,18 +153,18 @@ const tab1 = [
     rating: 4,
     text1: 'Welcome bonus: up to AU$6,000',
     text2: '+ 400 Free Spins',
-    url: 'https://pokies24.io/caswino-casino-review',
+    url: 'https://pokies24.io/rockwin-casino-review',
   },
 ]
 
 const tab2 = [
   {
     imgSrc: card1,
-    name: 'Caswino',
+    name: 'Caswino ',
     rating: 5,
     text1: 'Welcome bonus: 600% up to 4800$',
     text2: '+ 255 Free spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     imgSrc: card2,
@@ -173,7 +172,7 @@ const tab2 = [
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
     text2: '+ 100 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/neospin-casino-review',
   },
   {
     imgSrc: card3,
@@ -181,7 +180,7 @@ const tab2 = [
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
     text2: '+ 250 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/crownslots-review',
   },
   {
     imgSrc: card4,
@@ -189,7 +188,7 @@ const tab2 = [
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 150 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/bdm-bet-review',
   },
   {
     imgSrc: card5,
@@ -197,7 +196,7 @@ const tab2 = [
     rating: 4.7,
     text1: 'Welcome bonus: up to AU$5,000',
     text2: '+ 500 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/richard-casino-review',
   },
 ]
 
@@ -208,7 +207,7 @@ const tab3 = [
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
     text2: '+ 100 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/neospin-casino-review',
   },
   {
     imgSrc: card3,
@@ -216,7 +215,7 @@ const tab3 = [
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
     text2: '+ 250 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/crownslots-review',
   },
   {
     imgSrc: card4,
@@ -224,7 +223,7 @@ const tab3 = [
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 150 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/bdm-bet-review',
   },
   {
     imgSrc: card7,
@@ -232,7 +231,7 @@ const tab3 = [
     rating: 4.4,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 225 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/oscarspin-review',
   },
 ]
 
@@ -243,7 +242,7 @@ const tab4 = [
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
     text2: '+ 100 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/neospin-casino-review',
   },
   {
     imgSrc: card3,
@@ -251,7 +250,7 @@ const tab4 = [
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
     text2: '+ 250 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/crownslots-review',
   },
   {
     imgSrc: card4,
@@ -259,7 +258,7 @@ const tab4 = [
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 150 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/bdm-bet-review',
   },
 ]
 

@@ -17,6 +17,7 @@
 .header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   background-color: #193347;
   font-family: 'Poppins', sans-serif;
@@ -24,6 +25,7 @@
   font-size: 16px;
   padding: 12px 42px;
   z-index: 100;
+  height: 64px;
 }
 
 .popup-header {

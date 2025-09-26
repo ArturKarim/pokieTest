@@ -60,6 +60,5 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   background-color: #00192b;
-  width: 100vw;
 }
 </style>

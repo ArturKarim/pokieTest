@@ -2,7 +2,7 @@
   <div class="container-card">
     <img :alt="name + ' Logo'" :src="imageSrc" class="card-img" />
     <div class="info-card">
-      <p class="name-card">{{ name }}</p>
+      <p class="name-card" @click="openNewTab(url)">{{ name }}</p>
       <Rating :rating="rating" />
     </div>
     <div class="card-info-text">
@@ -76,6 +76,7 @@ function openNewTab(url) {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0;
+  cursor: pointer;
 }
 
 .card-info-text {
