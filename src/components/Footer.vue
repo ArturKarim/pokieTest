@@ -79,8 +79,8 @@
             </div>
           </div>
 
-          <div id="mailerlite-form" style="display: none">
-            <div class="ml-embedded" data-form="PLuCqf"></div>
+          <div style="display: none">
+            <form :id="formId" class="ml-embedded" data-form="PLuCqf"></form>
           </div>
 
           <div class="social-input-container">
@@ -88,9 +88,9 @@
               v-model="email"
               class="input"
               placeholder="Enter your email address"
-              @keyup.enter="subscribe"
+              @keyup.enter="submitToMailerLite"
             />
-            <button class="input-button" @click="subscribe">Subscribe</button>
+            <button class="input-button" @click="submitToMailerLite">Subscribe</button>
           </div>
         </div>
       </div>
@@ -306,8 +306,10 @@
 import { onMounted, ref } from 'vue'
 
 const email = ref('')
+const formId = ref('ml-form-' + Math.random().toString(36).substr(2, 9))
 
 onMounted(() => {
+  // Загружаем MailerLite скрипт
   if (!window.ml) {
     const script = document.createElement('script')
     script.src = 'https://assets.mailerlite.com/js/universal.js'
@@ -321,7 +323,7 @@ onMounted(() => {
   }
 })
 
-const subscribe = () => {
+const submitToMailerLite = () => {
   if (!email.value) {
     alert('Please enter your email address')
     return
@@ -333,28 +335,24 @@ const subscribe = () => {
     return
   }
 
-  if (window.ml) {
-    window.ml(
-      'webforms',
-      'create',
-      '1791493',
-      {
-        email: email.value,
-        fields: {},
-      },
-      {
-        onSubmit: (data) => {
-          console.log('Form submitted:', data)
-          alert('Thank you for subscribing!')
-          email.value = ''
-        },
-        onError: (error) => {
-          console.error('Subscription error:', error)
-          alert('Subscription failed. Please try again.')
-        },
-      },
-    )
+  // Находим скрытую форму MailerLite и заполняем её
+  const hiddenForm = document.getElementById(formId.value)
+  if (hiddenForm) {
+    // Создаем скрытое поле email и добавляем в форму
+    const emailInput = document.createElement('input')
+    emailInput.type = 'hidden'
+    emailInput.name = 'fields[email]'
+    emailInput.value = email.value
+    hiddenForm.appendChild(emailInput)
+
+    // Отправляем форму
+    hiddenForm.submit()
+
+    // Очищаем поле после отправки
+    email.value = ''
+    alert('Thank you for subscribing!')
   } else {
+    // Fallback если форма не найдена
     console.log('Would subscribe email:', email.value)
     alert('Thank you for subscribing!')
     email.value = ''
