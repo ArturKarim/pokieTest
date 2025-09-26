@@ -7,14 +7,14 @@
           v-for="(btn, idx) in buttons"
           :key="idx"
           :is-active="active === idx"
-          :srcImg="btn.src"
+          :src-img="btn.src"
           :text="btn.text"
           @click="active = idx"
         />
         <SideExpandable
           :is-active="active === 5"
           :items="servicesItems"
-          srcImg="../assets/images/side5.png"
+          :src-img="side5"
           text="Payment Methods"
           @item-click="active = 5"
         />
@@ -23,7 +23,7 @@
         <CasinoCard
           v-for="(card, idx) in activeTab"
           :key="idx"
-          :img-src="card['img-src']"
+          :img-src="card.imgSrc"
           :name="card.name"
           :rating="card.rating"
           :text1="card.text1"
@@ -34,41 +34,58 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import { computed, ref, watch } from 'vue'
 import SideButton from '@/components/SideButton.vue'
 import SideExpandable from '@/components/SideExpandable.vue'
 import CasinoCard from '@/components/CasinoCard.vue'
 
+// Импортируем изображения
+import side1 from '@/assets/images/side1.png'
+import side2 from '@/assets/images/side2.png'
+import side3 from '@/assets/images/side3.png'
+import side4 from '@/assets/images/side4.png'
+import side5 from '@/assets/images/side5.png'
+
+import card1 from '@/assets/images/card1.png'
+import card2 from '@/assets/images/card2.png'
+import card3 from '@/assets/images/card3.png'
+import card4 from '@/assets/images/card4.png'
+import card5 from '@/assets/images/card5.png'
+import card6 from '@/assets/images/card6.png'
+import card7 from '@/assets/images/card7.png'
+import card8 from '@/assets/images/card8.png'
+import card9 from '@/assets/images/card9.png'
+import card10 from '@/assets/images/card10.png'
+
 const buttons = ref([
-  { src: '../assets/images/side1.png', text: 'Best online casinos Australia' },
-  { src: '../assets/images/side2.png', text: 'Recommended casinos' },
-  { src: '../assets/images/side3.png', text: 'Mobile apps casino' },
-  { src: '../assets/images/side4.png', text: 'Best live Casinos' },
+  { src: side1, text: 'Best online casinos Australia' },
+  { src: side2, text: 'Recommended casinos' },
+  { src: side3, text: 'Mobile apps casino' },
+  { src: side4, text: 'Best live Casinos' },
 ])
+
 const active = ref(0)
 
 const servicesItems = ref([
   { text: 'PayId', url: '#' },
   { text: 'Credit cards', url: '#' },
-  {
-    text: 'Crypto',
-    url: '#',
-  },
+  { text: 'Crypto', url: '#' },
   { text: 'Neosurf', url: '#' },
 ])
 
 const tab1 = [
   {
-    'img-src': '../assets/images/card1.png',
-    name: 'Caswino Casino ',
+    imgSrc: card1,
+    name: 'Caswino Casino',
     rating: 5,
     text1: 'Welcome bonus: 600% up to 4800$',
     text2: '+ 255 Free spins',
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card2.png',
+    imgSrc: card2,
     name: 'Neospin',
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
@@ -76,7 +93,7 @@ const tab1 = [
     url: 'https://pokies24.io/neospin-casino-review',
   },
   {
-    'img-src': '../assets/images/card3.png',
+    imgSrc: card3,
     name: 'Crown Slots',
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
@@ -84,7 +101,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card4.png',
+    imgSrc: card4,
     name: 'BDM Bet',
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -92,7 +109,7 @@ const tab1 = [
     url: 'https://pokies24.io/richard-casino-review',
   },
   {
-    'img-src': '../assets/images/card5.png',
+    imgSrc: card5,
     name: 'Richard Casino',
     rating: 4.7,
     text1: 'Welcome bonus: up to AU$5,000',
@@ -100,7 +117,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review#',
   },
   {
-    'img-src': '../assets/images/card6.png',
+    imgSrc: card6,
     name: 'Axe Casino',
     rating: 4.5,
     text1: 'Welcome bonus: up to AU$5,625',
@@ -108,7 +125,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card7.png',
+    imgSrc: card7,
     name: 'Oscarspin',
     rating: 4.4,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -116,7 +133,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card8.png',
+    imgSrc: card8,
     name: 'SkyCrown',
     rating: 4.3,
     text1: 'Welcome bonus: up to AU$8,000',
@@ -124,7 +141,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card9.png',
+    imgSrc: card9,
     name: 'Hugo',
     rating: 4.2,
     text1: 'Welcome bonus: 225% up to AU$1,000',
@@ -132,7 +149,7 @@ const tab1 = [
     url: 'https://pokies24.io/caswino-casino-review',
   },
   {
-    'img-src': '../assets/images/card10.png',
+    imgSrc: card10,
     name: 'Rockwin Casino',
     rating: 4,
     text1: 'Welcome bonus: up to AU$6,000',
@@ -143,7 +160,7 @@ const tab1 = [
 
 const tab2 = [
   {
-    'img-src': '../assets/images/card1.png',
+    imgSrc: card1,
     name: 'Caswino',
     rating: 5,
     text1: 'Welcome bonus: 600% up to 4800$',
@@ -151,7 +168,7 @@ const tab2 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card2.png',
+    imgSrc: card2,
     name: 'Neospin',
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
@@ -159,7 +176,7 @@ const tab2 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card3.png',
+    imgSrc: card3,
     name: 'Crown Slots',
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
@@ -167,7 +184,7 @@ const tab2 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card4.png',
+    imgSrc: card4,
     name: 'BDM Bet',
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -175,7 +192,7 @@ const tab2 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card5.png',
+    imgSrc: card5,
     name: 'Richard Casino',
     rating: 4.7,
     text1: 'Welcome bonus: up to AU$5,000',
@@ -186,7 +203,7 @@ const tab2 = [
 
 const tab3 = [
   {
-    'img-src': '../assets/images/card2.png',
+    imgSrc: card2,
     name: 'Neospin',
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
@@ -194,7 +211,7 @@ const tab3 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card3.png',
+    imgSrc: card3,
     name: 'Crown Slots',
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
@@ -202,7 +219,7 @@ const tab3 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card4.png',
+    imgSrc: card4,
     name: 'BDM Bet',
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -210,7 +227,7 @@ const tab3 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card7.png',
+    imgSrc: card7,
     name: 'Oscarspin',
     rating: 4.4,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -218,9 +235,10 @@ const tab3 = [
     url: '#',
   },
 ]
+
 const tab4 = [
   {
-    'img-src': '../assets/images/card2.png',
+    imgSrc: card2,
     name: 'Neospin',
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
@@ -228,7 +246,7 @@ const tab4 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card3.png',
+    imgSrc: card3,
     name: 'Crown Slots',
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
@@ -236,7 +254,7 @@ const tab4 = [
     url: '#',
   },
   {
-    'img-src': '../assets/images/card4.png',
+    imgSrc: card4,
     name: 'BDM Bet',
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
@@ -255,8 +273,9 @@ const activeTab = computed(() => {
       return tab3
     case 3:
       return tab4
+    default:
+      return tab1
   }
-  return tab1
 })
 
 watch(active, () => {
@@ -265,6 +284,7 @@ watch(active, () => {
   }
 })
 </script>
+
 <style scoped>
 .container {
   padding: 60px 40px;
