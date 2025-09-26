@@ -2,13 +2,22 @@
 
 <template>
   <div class="banner">
-    <img alt="bannerLeft" class="banner-img" src="../assets/images/banner_full.png" />
+    <img
+      alt="Illustration of online casino theme with cards and chips | Best Online Casinos Australia pokies24.io
+"
+      class="banner-img"
+      src="../assets/images/banner_full.png"
+      title="Best Online Casinos in Australia | Pokies24 Listing Banner"
+    />
     <!--    <img alt="bannerLeft" class="banner-img" src="../assets/images/bannerLeft.png" />-->
     <!--    <img alt="bannerLeft" class="banner-img" src="../assets/images/bannerRight.png" />-->
     <!--    <img alt="bannerLeft" class="banner-img" src="../assets/images/bannerRighter.png" />-->
     <div class="banner-info">
-      <p class="banner-path">Home > Online Casinos</p>
-      <p class="banner-title">Best Online Casinos Australia</p>
+      <p>
+        <a class="banner-path" href="https://pokies24.io">Home > </a>
+        <a class="banner-path" href="https://pokies24.io/online-casinos">Online Casinos</a>
+      </p>
+      <p class="banner-title">Best Online casinos Australia</p>
       <p class="banner-text">
         The following listing only includes carefully selected Australian online casinos.<br />
         Each platform provides fair conditions for pokies fans, such as smooth gameplay,<br />
@@ -49,6 +58,7 @@
 
 .banner-path {
   font-size: 12px;
+  color: white;
 }
 
 .banner-title {

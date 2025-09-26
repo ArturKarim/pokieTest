@@ -1,23 +1,44 @@
 <template>
   <div class="container">
     <div class="logo-bar">
-      <a class="logo-bar-image" href="https://pokies24.io/free-pokies/pokies-by-provider">
+      <a
+        class="logo-bar-image"
+        href="https://pokies24.io/free-pokies/pokies-by-provider"
+        rel="nofollow"
+      >
         <img alt="aristocrat" src="../assets/images/aristocrat.png"
       /></a>
-      <a class="logo-bar-image" href="https://pokies24.io/free-pokies/pokies-by-provider">
+      <a
+        class="logo-bar-image"
+        href="https://pokies24.io/free-pokies/pokies-by-provider"
+        rel="nofollow"
+      >
         <img alt="pragmaticPlay" src="../assets/images/pragmaticPlay.png"
       /></a>
-      <a class="logo-bar-image" href="https://pokies24.io/free-pokies/pokies-by-provider">
+      <a
+        class="logo-bar-image"
+        href="https://pokies24.io/free-pokies/pokies-by-provider"
+        rel="nofollow"
+      >
         <img alt="bgaming" src="../assets/images/bgaming.png"
       /></a>
-      <a class="logo-bar-image" href="https://pokies24.io/free-pokies/pokies-by-provider">
+      <a
+        class="logo-bar-image"
+        href="https://pokies24.io/free-pokies/pokies-by-provider"
+        rel="nofollow"
+      >
         <img alt="playson" src="../assets/images/playson.png"
       /></a>
     </div>
     <div class="main-footer">
       <div class="main-footer-content">
         <div class="footer-info">
-          <img alt="logo" class="footer-logo" src="../assets/images/logo.png" />
+          <img
+            alt="pokies24.io logo"
+            class="footer-logo"
+            src="../assets/images/logo.png"
+            title=" logo Pokies24"
+          />
           <p class="footer-info-text">
             © 2025 Pokies24.io<br />
             This website is intended for informational purposes only and does not accept payments
@@ -28,12 +49,18 @@
         </div>
         <div class="footer-links">
           <div class="links-title">Quick links</div>
-          <a class="link" href="https://pokies24.io/online-casinos">Where to play</a>
-          <a class="link" href="https://pokies24.io/contact">Contact</a>
-          <a class="link" href="https://pokies24.io/responsible-gambling">Responsible Gambling</a>
-          <a class="link" href="https://pokies24.io/disclaimer">Disclaimer</a>
-          <a class="link" href="https://pokies24.io/privacy-policy">Privacy Policy</a>
-          <a class="link" href="https://pokies24.io/terms-conditions">Terms & Conditions</a>
+          <a class="link" href="https://pokies24.io/online-casinos" rel="nofollow">Where to play</a>
+          <a class="link" href="https://pokies24.io/contact" rel="nofollow">Contact</a>
+          <a class="link" href="https://pokies24.io/responsible-gambling" rel="nofollow"
+            >Responsible Gambling</a
+          >
+          <a class="link" href="https://pokies24.io/disclaimer" rel="nofollow">Disclaimer</a>
+          <a class="link" href="https://pokies24.io/privacy-policy" rel="nofollow"
+            >Privacy Policy</a
+          >
+          <a class="link" href="https://pokies24.io/terms-conditions" rel="nofollow"
+            >Terms & Conditions</a
+          >
         </div>
         <div class="footer-social">
           <p class="social-title">Sign up for free to get:</p>
@@ -51,9 +78,20 @@
               <span class="cta-text">Exclusive casino deals</span>
             </div>
           </div>
+          <!-- Скрытая форма MailerLite -->
+          <div id="mailerlite-form" style="display: none">
+            <div class="ml-embedded" data-form="PLuCqf"></div>
+          </div>
+
+          <!-- Видимая кастомная форма -->
           <div class="social-input-container">
-            <input class="input" placeholder="Enter your email address" />
-            <button class="input-button">Subscribe</button>
+            <input
+              v-model="email"
+              class="input"
+              placeholder="Enter your email address"
+              @keyup.enter="subscribe"
+            />
+            <button class="input-button" @click="subscribe">Subscribe</button>
           </div>
         </div>
       </div>
@@ -239,6 +277,13 @@
   line-height: 100%;
   letter-spacing: 0;
   border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-button:hover {
+  background-color: #e6b300;
 }
 
 .input {
@@ -247,6 +292,78 @@
   padding: 12px 20px;
   border-radius: 8px;
   color: #8899a5;
+  background: transparent;
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: #8899a5;
 }
 </style>
-<script setup></script>
+
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const email = ref('')
+
+onMounted(() => {
+  // Загружаем MailerLite скрипт
+  if (!window.ml) {
+    const script = document.createElement('script')
+    script.src = 'https://assets.mailerlite.com/js/universal.js'
+    script.async = true
+    script.onload = () => {
+      window.ml('account', '1791493')
+    }
+    document.head.appendChild(script)
+  } else {
+    window.ml('account', '1791493')
+  }
+})
+
+const subscribe = () => {
+  if (!email.value) {
+    alert('Please enter your email address')
+    return
+  }
+
+  // Валидация email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email.value)) {
+    alert('Please enter a valid email address')
+    return
+  }
+
+  // Используем MailerLite API для подписки
+  if (window.ml) {
+    window.ml(
+      'webforms',
+      'create',
+      '1791493',
+      {
+        email: email.value,
+        fields: {},
+        // Дополнительные параметры если нужны
+      },
+      {
+        onSubmit: (data) => {
+          console.log('Form submitted:', data)
+          alert('Thank you for subscribing!')
+          email.value = '' // Очищаем поле после успешной подписки
+        },
+        onError: (error) => {
+          console.error('Subscription error:', error)
+          alert('Subscription failed. Please try again.')
+        },
+      },
+    )
+  } else {
+    // Fallback если MailerLite не загрузился
+    console.log('Would subscribe email:', email.value)
+    alert('Thank you for subscribing!')
+    email.value = ''
+  }
+}
+</script>

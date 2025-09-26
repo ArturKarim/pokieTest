@@ -1,19 +1,16 @@
 <template>
   <div class="header">
     <div class="header-logo">
-      <img alt="logopokies24.io" src="../assets/images/logo.svg" />
+      <img alt="pokies24.io logo" src="../assets/images/logo.svg" title="logo Pokies24" />
     </div>
     <div class="header-menu">
-      <div>HOME</div>
-      <div>FREE POKIES</div>
-      <div>ONLINE CASINOS</div>
-      <div>ABOUT US</div>
-      <div>CONTACT</div>
+      <div :class="{ 'active-item': active === 0 }" @click="active = 0">HOME</div>
+      <FreePokiesDropdown :isActive="active === 1" @click="active = 1" />
+      <OnlineCasinosDropdown :isActive="active === 2" @click="active = 2" />
+      <div :class="{ 'active-item': active === 3 }" @click="active = 3">ABOUT US</div>
+      <div :class="{ 'active-item': active === 4 }" @click="active = 4">CONTACT</div>
     </div>
-    <div class="header-btn">
-      <img alt="Claim gift" class="header-claim-btn" src="../assets/images/ClaimGift.png" />
-      Claim Gift
-    </div>
+    <ClaimGiftBannerDropdown></ClaimGiftBannerDropdown>
   </div>
 </template>
 <style scoped>
@@ -26,6 +23,13 @@
   font-weight: 600;
   font-size: 16px;
   padding: 12px 42px;
+  z-index: 100;
+}
+
+.popup-header {
+  max-width: 241px;
+  background-color: #06253d;
+  border: 1px solid #35434e;
 }
 
 .header-logo {
@@ -41,9 +45,35 @@
   font-size: 16px;
 }
 
+.active-item {
+  color: #ffd700 !important;
+}
+
 .header-claim-btn {
   max-width: 100%;
   max-height: 100%;
+}
+
+.horizontal-shake {
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .header-btn {
@@ -61,9 +91,14 @@
   color: #ffd700;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-}
-
-.popup-menu {
+  cursor: pointer;
 }
 </style>
-<script setup></script>
+<script setup>
+import FreePokiesDropdown from '@/components/FreePokiesDropdown.vue'
+import OnlineCasinosDropdown from '@/components/OnlineCasinosDropdown.vue'
+import ClaimGiftBannerDropdown from '@/components/ClaimGiftBannerDropdown.vue'
+import { ref } from 'vue'
+
+const active = ref(0)
+</script>

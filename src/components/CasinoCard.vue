@@ -1,6 +1,6 @@
 <template>
   <div class="container-card">
-    <img :alt="imageSrc" :src="imageSrc" class="card-img" />
+    <img :alt="name + ' Logo'" :src="imageSrc" class="card-img" />
     <div class="info-card">
       <p class="name-card">{{ name }}</p>
       <Rating :rating="rating" />
@@ -10,8 +10,8 @@
       <p>{{ text2 }}</p>
     </div>
     <div class="card-info-btn">
-      <button class="review-btn">Review</button>
-      <button class="play-now-btn" @click="console.log(url)">Play Now</button>
+      <button class="review-btn" @click="openNewTab(url)">Review</button>
+      <button class="play-now-btn" @click="openNewTab('#')">Play Now</button>
     </div>
   </div>
 </template>
@@ -32,6 +32,11 @@ const props = defineProps({
 const imageSrc = computed(() => {
   return new URL(props.imgSrc, import.meta.url).href
 })
+
+function openNewTab(url) {
+  // Открыть в новой вкладке
+  window.open(url, '_blank')
+}
 </script>
 
 <style scoped>

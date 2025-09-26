@@ -1,22 +1,57 @@
 <template>
-  <div :class="{ expanded: isExpanded }" class="faq-item">
-    <div class="faq-header" @click="toggleExpanded">
+  <div
+    :class="{ expanded: isExpanded }"
+    aria-expanded="isExpanded"
+    aria-labelledby="`faq-question-${index}`"
+    class="faq-item"
+    role="article"
+  >
+    <div
+      :aria-controls="`faq-answer-${index}`"
+      :aria-expanded="isExpanded.toString()"
+      :tabindex="0"
+      class="faq-header"
+      role="button"
+      @click="toggleExpanded"
+      @keydown.enter="toggleExpanded"
+      @keydown.space="toggleExpanded"
+    >
       <div class="question-content">
-        <h3 :class="{ expanded: isExpanded }" class="question-title">
+        <h3
+          :id="`faq-question-${index}`"
+          :class="{ expanded: isExpanded }"
+          class="question-title"
+          itemprop="name"
+        >
           {{ question }}
         </h3>
       </div>
 
-      <button :aria-expanded="isExpanded" class="toggle-btn" @click.stop="toggleExpanded">
-        <img v-if="!isExpanded" alt="open" src="../assets/images/faqOpen.png" />
-        <img v-else alt="close" src="../assets/images/faqClose.png" />
+      <button
+        :aria-expanded="isExpanded.toString()"
+        :aria-label="isExpanded ? 'Collapse answer' : 'Expand answer'"
+        class="toggle-btn"
+        type="button"
+        @click.stop="toggleExpanded"
+      >
+        <img v-if="!isExpanded" alt="Expand answer" src="../assets/images/faqOpen.png" />
+        <img v-else alt="Collapse answer" src="../assets/images/faqClose.png" />
       </button>
     </div>
 
-    <transition name="expand">
-      <div v-if="isExpanded" class="faq-answer">
-        <div class="answer-content">
-          {{ answer }}
+    <transition name="expand" @enter="onEnter" @leave="onLeave" @after-enter="onAfterEnter">
+      <div
+        v-if="isExpanded"
+        :id="`faq-answer-${index}`"
+        :aria-labelledby="`faq-question-${index}`"
+        class="faq-answer"
+        itemprop="acceptedAnswer"
+        itemscope
+        itemtype="https://schema.org/Answer"
+        role="region"
+      >
+        <div class="answer-content" itemprop="text">
+          <p>{{ answer }}</p>
         </div>
       </div>
     </transition>
@@ -25,15 +60,11 @@
 
 <script>
 export default {
-  name: 'FaqItem',
+  name: 'ExpandableText',
   props: {
     question: {
       type: String,
       required: true,
-    },
-    shortText: {
-      type: String,
-      default: '',
     },
     answer: {
       type: String,
@@ -42,6 +73,10 @@ export default {
     initiallyExpanded: {
       type: Boolean,
       default: false,
+    },
+    index: {
+      type: Number,
+      required: true,
     },
   },
   data() {
@@ -54,13 +89,30 @@ export default {
       this.isExpanded = !this.isExpanded
       this.$emit('toggle', this.isExpanded)
     },
+    onEnter(el) {
+      el.style.height = 'auto'
+      const height = getComputedStyle(el).height
+      el.style.height = '0'
+      setTimeout(() => {
+        el.style.height = height
+      })
+    },
+    onAfterEnter(el) {
+      el.style.height = 'auto'
+    },
+    onLeave(el) {
+      el.style.height = getComputedStyle(el).height
+      setTimeout(() => {
+        el.style.height = '0'
+      })
+    },
   },
 }
 </script>
 
 <style scoped>
 .faq-item {
-  width: 1012px;
+  width: 100%;
   min-height: 70px;
   border: 1px solid #57626c;
   background: #10324c;
@@ -95,6 +147,12 @@ export default {
   transition: all 0.3s ease;
   position: relative;
   z-index: 2;
+  outline: none;
+}
+
+.faq-header:focus {
+  outline: 2px solid #ffc700;
+  outline-offset: 2px;
 }
 
 .question-content {
@@ -118,25 +176,6 @@ export default {
   margin-bottom: 8px;
 }
 
-.short-text {
-  color: #a0aec0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-top: 8px;
-  transition: all 0.3s ease;
-  max-height: 100px;
-  overflow: hidden;
-}
-
-.short-text.expanded {
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .toggle-btn {
   display: flex;
   justify-content: center;
@@ -148,6 +187,12 @@ export default {
   border-radius: 8px;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  outline: none;
+}
+
+.toggle-btn:focus {
+  outline: 2px solid #ffc700;
+  outline-offset: 2px;
 }
 
 .toggle-btn:hover {
@@ -155,43 +200,11 @@ export default {
   transform: scale(1.05);
 }
 
-/* Анимация раскрытия ответа */
-.expand-enter-active {
-  transition: all 0.4s ease-out;
-}
-
-.expand-leave-active {
-  transition: all 0.3s ease-in;
-}
-
-.expand-enter-from {
-  opacity: 0;
-  transform: translateY(-10px);
-  max-height: 0;
-}
-
-.expand-enter-to {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 500px;
-}
-
-.expand-leave-from {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 500px;
-}
-
-.expand-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-  max-height: 0;
-}
-
 .faq-answer {
   overflow: hidden;
   position: relative;
   z-index: 2;
+  transition: height 0.3s ease;
 }
 
 .answer-content {
@@ -204,26 +217,25 @@ export default {
 }
 
 .answer-content p {
-  margin: 0 0 16px 0;
+  margin: 0;
 }
 
-.answer-content p:last-child {
-  margin-bottom: 0;
+.expand-enter-active,
+.expand-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Анимация появления всего элемента */
-.faq-item {
-  animation: slideIn 0.4s ease-out;
+.expand-enter-from,
+.expand-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.expand-enter-to,
+.expand-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 500px;
 }
 </style>

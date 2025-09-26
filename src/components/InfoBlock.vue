@@ -5,7 +5,7 @@ import DoneItem from '@/components/DoneItem.vue'
 <template>
   <div class="container">
     <div class="top-block">
-      <div class="title">What is a real money online casino?</div>
+      <h2 class="title">What is a real money online casino?</h2>
       <p class="regular-text">
         <span class="span-bolt">A real money casino i</span>s a website or app where people place
         wagers using actual currency and can win cash prizes. These platforms host a wide range of
@@ -20,7 +20,7 @@ import DoneItem from '@/components/DoneItem.vue'
         pokies and other casino games accept AUD or other currencies, provide secure banking and
         allow timely withdrawals.
       </p>
-      <div class="title">Are online casinos legal in Australia?</div>
+      <h2 class="title">Are online casinos legal in Australia?</h2>
       <p class="regular-text">
         The legal framework for online gambling in Australia centers on the Interactive Gambling Act
         2001. That law restricts the provision of some interactive gambling services to people in
@@ -47,7 +47,7 @@ import DoneItem from '@/components/DoneItem.vue'
       </p>
     </div>
     <div class="middle-align">
-      <div class="title">
+      <h2 class="title">
         How to choose the best Australian online casino<br />
         for your needs
         <p class="regular-text">
@@ -57,10 +57,10 @@ import DoneItem from '@/components/DoneItem.vue'
           mobile site performs.<br />
           To find the best fit, follow a structured approach.
         </p>
-      </div>
+      </h2>
     </div>
     <div class="license-container">
-      <div class="license-block">
+      <h3 class="license-block">
         <div class="title">
           <img
             alt="LicAndReg"
@@ -75,8 +75,8 @@ import DoneItem from '@/components/DoneItem.vue'
             strictly than others.
           </p>
         </div>
-      </div>
-      <div class="license-block">
+      </h3>
+      <h3 class="license-block">
         <div class="title">
           <img
             alt="Game providers"
@@ -90,8 +90,8 @@ import DoneItem from '@/components/DoneItem.vue'
             generators and regular audits.
           </p>
         </div>
-      </div>
-      <div class="license-block">
+      </h3>
+      <h3 class="license-block">
         <div class="title">
           <img
             alt="Payment methods and currency"
@@ -106,8 +106,8 @@ import DoneItem from '@/components/DoneItem.vue'
             frequently preferred by regular players.
           </p>
         </div>
-      </div>
-      <div class="license-block">
+      </h3>
+      <h3 class="license-block">
         <div class="title">
           <img alt="Bonus terms" class="licence-block-icon" src="../assets/icons/Bonus Terms.png" />
           Bonus terms
@@ -116,8 +116,8 @@ import DoneItem from '@/components/DoneItem.vue'
             terms show the operator treats players seriously.
           </p>
         </div>
-      </div>
-      <div class="license-block">
+      </h3>
+      <h3 class="license-block">
         <div class="title">
           <img
             alt="Security and privacy"
@@ -128,7 +128,7 @@ import DoneItem from '@/components/DoneItem.vue'
           <p class="regular-text">Check for SSL encryption, an up-to-date privacy policy and clear
             KYC procedures.</p>
         </div>
-      </div>
+      </h3>
       <div class="license-block">
         <div class="title">
           <img
@@ -153,9 +153,9 @@ import DoneItem from '@/components/DoneItem.vue'
     </div>
     <div class="reliability-container">
       <div class="reliability-block">
-        <div class="title">
+        <h2 class="title">
           What should you do if you have doubts about the reliability of a casino?
-        </div>
+        </h2>
         <p class="subtitle">
           If anything seems unreliable, take the steps before you deposit real money:
         </p>
@@ -198,7 +198,7 @@ import DoneItem from '@/components/DoneItem.vue'
       </div>
     </div>
     <div class="middle-align">
-      <div class="title">
+      <h2 class="title">
         How do we rate and verify the reliability of online casinos
         <p class="regular-text">
           Reliable verification depends on repeatable checks. Our rating process covers three main
@@ -208,12 +208,12 @@ import DoneItem from '@/components/DoneItem.vue'
           site passed our licence and operational checks and does not have a pattern of unresolved
           complaints.
         </p>
-      </div>
+      </h2>
     </div>
     <div class="Lbp-container">
       <div class="Lbp-block">
         <img alt="Licensing Check" class="Lbp-icon" src="../assets/icons/LicensingCheck.png" />
-        <div class="Lbp-title">Licensing Check</div>
+        <h3 class="Lbp-title">Licensing Check</h3>
         We confirm the operator’s licence, the issuing authority, the licence number and the current
         status on the regulator’s site. We also note whether the operator publishes independent
         audits or RNG certification. Not all licences hold the same weight. A licence from a major
@@ -221,7 +221,7 @@ import DoneItem from '@/components/DoneItem.vue'
       </div>
       <div class="Lbp-block">
         <img alt="Bonus Fairness" class="Lbp-icon" src="../assets/icons/BonusFairness.png" />
-        <div class="Lbp-title">Bonus Fairness</div>
+        <h3 class="Lbp-title">Bonus Fairness</h3>
         We evaluate all advertised bonuses for clarity and fairness. Key items are wagering
         requirements, which games count towards meeting those requirements, any maximum cashout
         limits and prohibited game lists. A generous-sounding bonus with opaque or punitive
@@ -233,7 +233,7 @@ import DoneItem from '@/components/DoneItem.vue'
           class="Lbp-icon"
           src="../assets/icons/PlayerReview.png"
         />
-        <div class="Lbp-title">Player reviews and complaints</div>
+        <h3 class="Lbp-title">Player reviews and complaints</h3>
         We collect and aggregate player reports about withdrawals, KYC processing, account closures
         and customer support. Where complaints appear, we look for evidence of dispute resolution. A
         casino that resolves complaints promptly and transparently will receive a higher rating than
@@ -242,7 +242,7 @@ import DoneItem from '@/components/DoneItem.vue'
     </div>
     <div class="other-info-container">
       <div class="other-info-block">
-        <div class="title">Mobile Casino Experience in Australia</div>
+        <h2 class="title">Mobile Casino Experience in Australia</h2>
         Mobile is the dominant channel for online gambling in Australia. A good mobile online casino
         Australia should have a responsive website or an app that works on modern phones and
         tablets. Key mobile considerations are:
@@ -262,7 +262,7 @@ import DoneItem from '@/components/DoneItem.vue'
         </div>
         Testing the mobile experience via demo games is a practical way to assess an operator’s
         mobile readiness before committing funds.
-        <div class="title">Live Casino Australia</div>
+        <h2 class="title">Live Casino Australia</h2>
         Live casino games bring a real-dealer table to your screen via video stream. Popular live
         games include live blackjack, live roulette, live baccarat and game-show style titles. When
         choosing a live casino:
@@ -290,19 +290,19 @@ import DoneItem from '@/components/DoneItem.vue'
       </div>
     </div>
     <div class="middle-align">
-      <div class="title">
+      <h2 class="title">
         Online casino deposit methods and withdrawals
         <p class="regular-text">
           Payment options are a major factor when choosing where to play. Below are common<br>
           methods
           with a short description of how they work for Australian players.
         </p>
-      </div>
+      </h2>
     </div>
     <div class="payment-container">
       <div class="payment-block">
         <img alt="Crypto Casino" class="payment-image" src="../assets/icons/CryptoCasino.png">
-        <div class="payment-title">Crypto Casino
+        <h3 class="payment-title">Crypto Casino
           <p class="regular-text">
             Cryptocurrencies offer fast settlement times and increased privacy for players who
             prefer
@@ -314,50 +314,50 @@ import DoneItem from '@/components/DoneItem.vue'
             for
             international transfers. LSI terms to consider include casinos with fast withdrawals and
             instant payout casinos Australia.</p>
-        </div>
+        </h3>
       </div>
       <div class="payment-block">
         <img alt="PayID Casino" class="payment-image" src="../assets/icons/PayIDCasino.png">
-        <div class="payment-title">PayID Casino
+        <h3 class="payment-title">PayID Casino
           <p class="regular-text">
             PayID is an Australian banking identifier that links an easy-to-remember handle to a
             bank account. PayID deposits can be fast and reliable. Several online casinos now accept
             PayID as it simplifies AUD deposits and reduces input errors. For Australian players who
             want an AUD deposit method with bank-level settlement, PayID is a relevant option.</p>
-        </div>
+        </h3>
       </div>
       <div class="payment-block">
         <img alt="PayPal Casino" class="payment-image" src="../assets/icons/PayPalCasino.png">
-        <div class="payment-title">PayPal Casino
+        <h3 class="payment-title">PayPal Casino
           <p class="regular-text">
             PayPal provides an extra layer of consumer protection and quick transfers between a
             PayPal account and the casino. PayPal acceptance varies by operator and jurisdiction. If
             a casino supports PayPal, deposits are usually instant and withdrawals are faster than
             standard bank transfers. Many players select PayPal for convenience and dispute
             resolution mechanisms.</p>
-        </div>
+        </h3>
       </div>
       <div class="payment-block">
         <img alt="Casino Credit Card" class="payment-image"
              src="../assets/icons/CasinoCreditCard.png">
-        <div class="payment-title">Casino Credit Card
+        <h3 class="payment-title">Casino Credit Card
           <p class="regular-text">
             Visa and MasterCard remain widely accepted for deposits. Card withdrawals may be
             restricted by some operators or subject to longer processing times. Card payments are
             generally straightforward for deposits, but check whether the casino allows card-based
             withdrawals to the same card.</p>
-        </div>
+        </h3>
       </div>
       <div class="payment-block">
         <img alt="Neosurf Casino" class="payment-image"
              src="../assets/icons/NeosurfCasino.png">
-        <div class="payment-title">Neosurf Casino
+        <h3 class="payment-title">Neosurf Casino
           <p class="regular-text">
             Neosurf is a prepaid voucher system that allows deposits without sharing bank or card
             details. It is convenient for players who prefer preloaded funds. Withdrawals cannot go
             to Neosurf vouchers, so if you use Neosurf for deposits you will need to confirm the
             casino’s withdrawal options in advance.</p>
-        </div>
+        </h3>
       </div>
       <div>
       </div>
@@ -372,7 +372,7 @@ import DoneItem from '@/components/DoneItem.vue'
     </div>
     <div class=".responsible-block">
       <div class="responsible-block">
-        <div class="title">Responsible Gambling and Player Protection</div>
+        <h2 class="title">Responsible Gambling and Player Protection</h2>
         <p class="regular-text">Responsible gambling is essential. A reputable casino provides
           tools and
           resources such as
@@ -402,7 +402,7 @@ import DoneItem from '@/components/DoneItem.vue'
             </p>
           </ul>
         </div>
-        <div class="title">Closing notes</div>
+        <h2 class="title">Closing notes</h2>
         <p class="regular-text"> Online real money casino play involves risk and responsibility.
           For Australian players,
           the relevant law means local providers cannot offer casino services, yet offshore
@@ -422,6 +422,7 @@ import DoneItem from '@/components/DoneItem.vue'
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 60px 42px;
   color: white;
   font-family: 'Poppins', sans-serif;

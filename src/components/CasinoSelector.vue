@@ -61,11 +61,11 @@ const servicesItems = ref([
 const tab1 = [
   {
     'img-src': '../assets/images/card1.png',
-    name: 'Caswino',
+    name: 'Caswino Casino ',
     rating: 5,
     text1: 'Welcome bonus: 600% up to 4800$',
     text2: '+ 255 Free spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card2.png',
@@ -73,7 +73,7 @@ const tab1 = [
     rating: 5,
     text1: 'Welcome bonus: 100% up to AU$6,000',
     text2: '+ 100 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/neospin-casino-review',
   },
   {
     'img-src': '../assets/images/card3.png',
@@ -81,7 +81,7 @@ const tab1 = [
     rating: 4.9,
     text1: 'Welcome bonus: 400% up to AU$4,000',
     text2: '+ 250 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card4.png',
@@ -89,7 +89,7 @@ const tab1 = [
     rating: 4.8,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 150 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/richard-casino-review',
   },
   {
     'img-src': '../assets/images/card5.png',
@@ -97,7 +97,7 @@ const tab1 = [
     rating: 4.7,
     text1: 'Welcome bonus: up to AU$5,000',
     text2: '+ 500 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review#',
   },
   {
     'img-src': '../assets/images/card6.png',
@@ -105,7 +105,7 @@ const tab1 = [
     rating: 4.5,
     text1: 'Welcome bonus: up to AU$5,625',
     text2: '+ 200 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card7.png',
@@ -113,7 +113,7 @@ const tab1 = [
     rating: 4.4,
     text1: 'Welcome bonus: up to AU$4,000',
     text2: '+ 225 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card8.png',
@@ -121,7 +121,7 @@ const tab1 = [
     rating: 4.3,
     text1: 'Welcome bonus: up to AU$8,000',
     text2: '+ 400 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card9.png',
@@ -129,7 +129,7 @@ const tab1 = [
     rating: 4.2,
     text1: 'Welcome bonus: 225% up to AU$1,000',
     text2: '+ 275 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
   {
     'img-src': '../assets/images/card10.png',
@@ -137,7 +137,7 @@ const tab1 = [
     rating: 4,
     text1: 'Welcome bonus: up to AU$6,000',
     text2: '+ 400 Free Spins',
-    url: '#',
+    url: 'https://pokies24.io/caswino-casino-review',
   },
 ]
 
@@ -271,7 +271,7 @@ watch(active, () => {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   gap: 30px;
 }
